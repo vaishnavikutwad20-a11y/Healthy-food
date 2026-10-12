@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NutriBowl – Fresh, balanced meals delivered | Order healthy food online</title>
+<meta name="description" content="NutriBowl delivers fresh, balanced Indian meals with transparent nutrition. Order high-protein bowls, vegetarian meals and weekly meal plans.">
+<meta name="theme-color" content="#1f4d3a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🥗%3C/text%3E%3C/svg%3E">
+<style>
+:root{--g:#1f4d3a;--g2:#2f6b4f;--leaf:#7bb661;--cream:#f7f3e8;--card:#fffdf6;--ink:#1b2a22;--mut:#55655b;--sun:#f2b134;--line:#e3dcc8;--r:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--cream);padding-bottom:80px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0}
+h1{font-size:clamp(2.1rem,7vw,3.6rem)}h2{font-size:clamp(1.6rem,4.5vw,2.3rem);margin-bottom:8px}h3{font-size:1.1rem}
+p{margin:0 0 .6em}a{color:var(--g2)}img{max-width:100%;display:block}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}section{padding:48px 0}.sub{color:var(--mut);max-width:60ch}
+.btn{min-height:44px;padding:10px 18px;border:0;border-radius:999px;background:var(--g);color:#fff;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.btn:hover{background:var(--g2)}.btn.sun{background:var(--sun);color:var(--ink)}.btn.out{background:transparent;color:var(--g);border:2px solid var(--g)}.btn.wide{width:100%}.btn[disabled]{opacity:.5;cursor:not-allowed}
+.lnk{background:none;border:0;color:var(--g2);text-decoration:underline;cursor:pointer;min-height:44px;padding:0 6px}
+header{position:sticky;top:0;z-index:20;background:var(--g);color:#fff}
+.hd{display:flex;align-items:center;gap:10px;height:60px}.logo{font:700 1.5rem Georgia,serif;color:#fff;text-decoration:none;margin-right:auto}.logo span{color:var(--sun)}
+.ib{min-height:44px;min-width:44px;border-radius:999px;border:1px solid #ffffff55;background:transparent;color:#fff;cursor:pointer;padding:0 14px}
+nav{background:var(--g2);overflow-x:auto;white-space:nowrap}nav .wrap{display:flex;gap:4px}nav a{color:#fff;text-decoration:none;padding:12px 12px;font-size:.95rem}nav a:hover{text-decoration:underline}
+.hero{background:linear-gradient(180deg,#e8efd9,var(--cream));padding:40px 0}.hg{display:grid;gap:28px;align-items:center}
+.hero p.lead{font-size:1.15rem;color:var(--mut);max-width:48ch;margin:14px 0 20px}.cta{display:flex;flex-wrap:wrap;gap:10px}
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}.trust li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.88rem}
+.hero img{border-radius:28px;width:100%;box-shadow:0 12px 40px #1f4d3a33}
+.pin{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}.pin input{flex:1 1 150px}
+input,select{min-height:44px;padding:8px 12px;border:1.5px solid #b9b49c;border-radius:12px;background:#fff;width:100%}
+label{display:block;font-weight:600;margin:12px 0 4px}.err{color:#b3261e;font-size:.88rem;min-height:1.1em}.ok{color:#17653a;font-weight:600}.bad{color:#b3261e;font-weight:600}
+.tools{display:grid;gap:10px;margin:18px 0}.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.chip{flex:none;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--g);background:transparent;cursor:pointer}.chip[aria-pressed=true]{background:var(--g);color:#fff}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card .im{border:0;padding:0;background:none;cursor:pointer;display:block;width:100%}.card .im img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.tag{position:absolute;top:10px;left:10px;background:var(--sun);font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:999px}
+.heart{position:absolute;top:6px;right:6px;width:44px;height:44px;border-radius:50%;border:0;background:#ffffffdd;color:#9a9a9a;font-size:1.3rem;cursor:pointer}.heart.on{color:#d6336c}
+.cb{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}.cb p{color:var(--mut);font-size:.92rem;margin:0}.cb small{color:var(--mut)}
+.dot{display:inline-block;width:14px;height:14px;border:2px solid;border-radius:3px;position:relative;vertical-align:-1px}.dot:after{content:"";position:absolute;inset:2px;border-radius:50%;background:currentColor}.dot.v{color:#1a8a3c}.dot.n{color:#b3261e}
+.mac{display:flex;flex-wrap:wrap;gap:6px 12px;list-style:none;padding:0;margin:4px 0;font-size:.85rem;color:var(--mut)}.mac b{color:var(--ink)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:8px}.row strong{font-size:1.2rem}
+.plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}.plan{background:var(--g);color:#fff;border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:8px}.plan.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.plan ul{padding-left:18px;margin:4px 0}.plan .pr{font:700 1.7rem Georgia,serif}.plan .btns{display:flex;gap:8px;margin-top:auto;padding-top:10px}.plan .btns .btn{flex:1}.plan:not(.alt) .btn.out{color:#fff;border-color:#fff}
+.why{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.why div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}.why span{font-size:1.6rem}
+.band{background:var(--g);color:#fff}.band .sub{color:#d6e5d9}
+.rv{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}.rv blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}.st{color:#c98a00;letter-spacing:2px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:8px}summary{min-height:48px;padding:12px 16px;cursor:pointer;font-weight:600}details p{padding:0 16px 12px;color:var(--mut)}
+footer{background:#14352a;color:#cfe0d4;padding:36px 0}footer a{color:#fff}footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px}footer .lnk{color:#fff}footer small{display:block;margin-top:12px;color:#9fb8a8}
+dialog{border:0;border-radius:20px;padding:0;background:var(--cream);color:var(--ink);width:min(720px,calc(100% - 16px));max-height:92vh}dialog::backdrop{background:#0008}
+#c{margin:0 0 0 auto;height:100%;max-height:100%;border-radius:20px 0 0 20px;width:min(430px,100%)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;position:sticky;top:0;background:var(--cream);border-bottom:1px solid var(--line);z-index:2}.db{padding:16px}
+.pimg{width:100%;aspect-ratio:16/10;object-fit:cover}
+table{width:100%;border-collapse:collapse}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+.ci{list-style:none;padding:0;margin:0}.ci li{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.ci img{width:64px;height:64px;border-radius:10px;object-fit:cover}.ci div{flex:1}.ci .r{flex:none;text-align:right}.ci span{display:block;color:var(--mut);font-size:.88rem}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--g);border-radius:999px;margin-top:4px}.qty button{width:44px;height:44px;border:0;background:none;font-size:1.3rem;cursor:pointer}.qty output{min-width:28px;text-align:center;font-weight:700}
+.tot div{display:flex;justify-content:space-between;padding:4px 0}.tot .f{font-weight:700;font-size:1.15rem;border-top:2px solid var(--ink);margin-top:6px;padding-top:8px}
+.note{background:#fff3cf;border-radius:10px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.steps{display:flex;gap:6px;margin-bottom:10px;font-size:.82rem}.steps span{flex:1;padding:6px;text-align:center;border-radius:8px;background:#e6e1cf}.steps .on{background:var(--g);color:#fff}
+.opt{display:flex;gap:10px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin:6px 0;font-weight:500}.opt input{width:22px;min-height:22px}
+.g2{display:grid;gap:0 12px;grid-template-columns:1fr 1fr}.g2 .full{grid-column:1/-1}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px}
+.ord{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}.badge{background:var(--sun);border-radius:999px;padding:2px 10px;font-size:.8rem;font-weight:700}
+#t{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;z-index:99;opacity:0;pointer-events:none;transition:opacity .2s}#t.on{opacity:1}
+#bar{position:fixed;left:0;right:0;bottom:0;z-index:15;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:var(--cream);border-top:1px solid var(--line);display:none}
+#bar.on{display:block}
+@media(min-width:760px){.hg{grid-template-columns:1.1fr .9fr}.tools{grid-template-columns:1fr 220px}#bar{display:none!important}body{padding-bottom:0}}
+@media(max-width:480px){.g2{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#t{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to menu</a>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#top" aria-label="NutriBowl home">Nutri<span>Bowl</span></a>
+  <button class="ib" data-a="acct" data-v="orders" aria-label="My account and orders">Account</button>
+  <button class="ib" data-a="cart" aria-label="Open cart">Cart <b id="cn">0</b></button>
+ </div>
+ <nav aria-label="Main"><div class="wrap"><a href="#menu">Menu</a><a href="#plans">Meal plans</a><a href="#why">Why NutriBowl</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></nav>
+</header>
+<main id="top">
+<section class="hero"><div class="wrap hg">
+ <div>
+  <h1>Eat Better. Feel Better. Live Better.</h1>
+  <p class="lead">Fresh, balanced meals made for your everyday health goals — delivered to your doorstep.</p>
+  <div class="cta"><a class="btn sun" href="#menu">Order Healthy Food</a><a class="btn out" href="#plans">Explore Meal Plans</a></div>
+  <form class="pin" id="pf" aria-label="Check delivery availability"><input id="pc" inputmode="numeric" maxlength="6" placeholder="Enter PIN code" aria-label="PIN code"><button class="btn" type="submit">Check Delivery Availability</button></form>
+  <p id="pr" role="status" style="margin-top:8px"></p>
+  <ul class="trust"><li>🌿 Fresh ingredients</li><li>📋 Nutrition information</li><li>💪 High-protein options</li><li>🧼 Hygienic preparation</li><li>🛵 Convenient delivery</li></ul>
+ </div>
+ <img id="hi" alt="Illustration of a NutriBowl grilled chicken millet bowl" width="560" height="448">
+</div></section>
+
+<section id="menu"><div class="wrap">
+ <h2>Our menu</h2><p class="sub">Tasty, home-style Indian flavours with the nutrition shown on every meal. Illustrations are placeholders — swap in your own food photos.</p>
+ <div class="tools"><input id="q" type="search" placeholder="Search meals, e.g. paneer, millet" aria-label="Search food">
+ <select id="so" aria-label="Sort meals"><option value="">Sort: Recommended</option><option value="pl">Price: low to high</option><option value="ph">Price: high to low</option><option value="cl">Calories: low to high</option><option value="pr">Protein: high to low</option></select></div>
+ <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+ <div class="grid" id="grid" aria-live="polite"></div>
+</div></section>
+
+<section id="plans" class="band"><div class="wrap">
+ <h2>Choose a plan that fits your goal</h2><p class="sub">Meal plans built around how you like to eat. Calories and protein are approximate averages per meal. Plans are food choices, not medical advice.</p>
+ <div class="plans" id="pl" style="margin-top:20px"></div>
+</div></section>
+
+<section id="why"><div class="wrap"><h2>Why NutriBowl</h2><p class="sub">Convenient + Tasty + Transparent.</p>
+ <div class="why" style="margin-top:18px">
+  <div><span>🥦</span><h3>Fresh Ingredients</h3><p>Cooked in small batches with vegetables, grains and proteins we pick for flavour.</p></div>
+  <div><span>📊</span><h3>Transparent Nutrition</h3><p>Calories, protein, carbs, fat and allergens are shown for every meal.</p></div>
+  <div><span>💪</span><h3>Protein-Rich Choices</h3><p>Chicken, paneer, eggs, tofu and legumes in plenty of options.</p></div>
+  <div><span>🛵</span><h3>Convenient Delivery</h3><p>Pick a morning, afternoon or evening slot that suits your day.</p></div>
+  <div><span>🧼</span><h3>Hygienic Preparation</h3><p>Prepared in a clean kitchen and packed in sealed containers.</p></div>
+  <div><span>📅</span><h3>Flexible Meal Plans</h3><p>Office lunches to a full week of meals — pick what fits.</p></div>
+ </div></div></section>
+
+<section id="about" class="band"><div class="wrap"><h2>About NutriBowl</h2>
+ <p class="sub" style="font-size:1.2rem">We believe healthy food should be convenient, delicious and transparent.</p>
+ <p class="sub">NutriBowl exists for people who want to eat well but don't have time to plan and cook — students, busy professionals and anyone building better habits. We use fresh ingredients, show the nutrition for every meal, and offer balanced choices that taste like real food. No big claims: just good meals, clearly labelled.</p></div></section>
+
+<section id="reviews"><div class="wrap"><h2>What customers say</h2>
+ <p class="sub"><b>Demo content:</b> these are sample reviews for layout only. Replace with genuine customer reviews after launch.</p>
+ <div class="rv" id="rv" style="margin-top:18px"></div></div></section>
+
+<section id="faq" class="band"><div class="wrap" style="max-width:780px"><h2>Frequently asked questions</h2><div id="fq" style="margin-top:16px;color:var(--ink)"></div></div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+ <h3 style="color:#fff">NutriBowl</h3>
+ <p>Business address: [Add registered business address]<br>Support phone: [+91-XXXXXXXXXX]<br>Support email: [support@yourdomain.in]<br>FSSAI licence: [Add licence number when available]</p>
+ <ul><li><button class="lnk" data-a="pol" data-v="privacy">Privacy Policy</button></li><li><button class="lnk" data-a="pol" data-v="terms">Terms &amp; Conditions</button></li><li><button class="lnk" data-a="pol" data-v="refund">Refund/Cancellation Policy</button></li><li><button class="lnk" data-a="pol" data-v="delivery">Delivery Policy</button></li><li><button class="lnk" data-a="pol" data-v="contact">Contact Us</button></li><li><a href="#faq">FAQ</a></li></ul>
+ <small>© NutriBowl. Prototype: payments are test-only and nutrition values are approximate.</small>
+</div></footer>
+
+<div id="bar"><button class="btn sun wide" data-a="cart" id="barb">View cart</button></div>
+<div id="t" role="status" aria-live="polite"></div>
+<dialog id="m" aria-label="Details"></dialog>
+<dialog id="c" aria-label="Cart"></dialog>
+
+<script>
+/* ============ 1. DATA (replace with API/DB later: GET /api/products, /api/plans, /api/coupons, /api/delivery-areas) ============ */
+const PRODUCTS=[
+{id:1,n:'Grilled Chicken Millet Bowl',d:'Herb-grilled chicken on foxtail millet with steamed veggies.',p:249,cal:480,pro:38,carb:42,fat:14,v:0,m:'Lunch',al:[],tag:'Best Seller',ing:'Chicken breast, foxtail millet, broccoli, carrot, olive oil, herbs',g:350,c:['#e9c46a','#8ab17d','#f4a261','#e76f51']},
+{id:2,n:'Paneer Tikka Quinoa Bowl',d:'Smoky paneer tikka, quinoa, peppers and mint yogurt.',p:229,cal:460,pro:28,carb:44,fat:18,v:1,m:'Lunch',al:['Milk'],tag:'Popular',ing:'Paneer, quinoa, bell peppers, onion, curd, mint, spices',g:340,c:['#f1e3b3','#f4a261','#e76f51','#8ab17d']},
+{id:3,n:'Egg Bhurji Multigrain Wrap',d:'Masala egg bhurji rolled in a soft multigrain wrap.',p:149,cal:340,pro:22,carb:32,fat:13,v:0,m:'Breakfast',al:['Eggs','Gluten'],tag:'',ing:'Eggs, multigrain atta wrap, onion, tomato, green chilli, coriander',g:220,c:['#f6d365','#e9c46a','#e76f51','#8ab17d']},
+{id:4,n:'Moong Dal Chilla Plate',d:'Two protein-rich moong chillas with mint chutney.',p:119,cal:280,pro:16,carb:34,fat:8,v:1,m:'Breakfast',al:[],tag:'Popular',ing:'Moong dal, spinach, onion, ginger, mint chutney',g:240,c:['#d4e09b','#8ab17d','#f4a261','#fff3b0']},
+{id:5,n:'Vegan Chickpea Buddha Bowl',d:'Roasted chickpeas, sweet potato, greens and tahini dressing.',p:199,cal:390,pro:17,carb:52,fat:12,v:2,m:'Lunch',al:['Sesame'],tag:'',ing:'Chickpeas, sweet potato, kale, cucumber, tahini, lemon',g:330,c:['#e9c46a','#f4a261','#6a994e','#bc4749']},
+{id:6,n:'Oats & Berry Overnight Jar',d:'Rolled oats soaked in almond milk with seasonal fruit.',p:129,cal:310,pro:12,carb:44,fat:9,v:2,m:'Breakfast',al:['Gluten','Tree nuts'],tag:'',ing:'Rolled oats, almond milk, chia seeds, berries, banana',g:250,cold:1,c:['#f1e3d3','#9d4edd','#c9184a','#ffd6a5']},
+{id:7,n:'Roasted Makhana Mix',d:'Light, crunchy fox nuts with a peri-peri dusting.',p:89,cal:150,pro:5,carb:18,fat:6,v:2,m:'Snacks',al:[],tag:'',ing:'Makhana, olive oil, peri-peri spice mix, salt',g:40,cold:1,c:['#fff3b0','#f6d365','#e76f51','#fff']},
+{id:8,n:'Sprouts Chaat Cup',d:'Tangy sprouted moong with onion, tomato and lemon.',p:79,cal:160,pro:10,carb:24,fat:3,v:2,m:'Snacks',al:[],tag:'',ing:'Sprouted moong, onion, tomato, cucumber, lemon, chaat masala',g:180,cold:1,c:['#d4e09b','#bc4749','#6a994e','#f4a261']},
+{id:9,n:'Tandoori Chicken Salad',d:'Tandoori chicken over crunchy greens and lemon-mint dressing.',p:219,cal:330,pro:34,carb:14,fat:15,v:0,m:'Lunch',al:['Milk'],tag:'Popular',ing:'Chicken breast, curd marinade, lettuce, cucumber, carrot, lemon, mint',g:300,cold:1,c:['#bde0a3','#e76f51','#f4a261','#6a994e']},
+{id:10,n:'Tofu Stir-fry Brown Rice',d:'Garlicky tofu and vegetables over brown rice.',p:209,cal:420,pro:24,carb:48,fat:14,v:2,m:'Lunch',al:['Soy','Sesame'],tag:'',ing:'Tofu, brown rice, capsicum, carrot, beans, soy sauce, sesame oil',g:340,c:['#e0c9a6','#f1e3b3','#6a994e','#e76f51']},
+{id:11,n:'Greek Yogurt Fruit Parfait',d:'Thick yogurt layered with fruit and toasted seeds.',p:119,cal:220,pro:14,carb:28,fat:5,v:1,m:'Snacks',al:['Milk','Tree nuts'],tag:'',ing:'Greek yogurt, apple, pomegranate, honey, almonds',g:200,cold:1,c:['#fff','#c9184a','#ffb703','#f1e3d3']},
+{id:12,n:'Rajma Brown Rice Bowl',d:'Comforting home-style rajma with brown rice and kachumber.',p:169,cal:430,pro:18,carb:62,fat:10,v:1,m:'Lunch',al:[],tag:'Best Seller',ing:'Rajma, brown rice, tomato, onion, spices, cucumber salad',g:380,c:['#e0c9a6','#9b2226','#e76f51','#6a994e']}];
+const CATS={'High Protein':i=>i.pro>=25,Vegetarian:i=>i.v>0,Vegan:i=>i.v==2,Breakfast:i=>i.m=='Breakfast',Lunch:i=>i.m=='Lunch',Snacks:i=>i.m=='Snacks','Low Calorie':i=>i.cal<=350};
+const PLANS=[
+{id:'hp',n:'High Protein',meals:6,cal:480,pro:32,price:1299,inc:['6 protein-forward lunches','Chicken, paneer and tofu rotation','Nutrition card with every meal']},
+{id:'wm',n:'Weight Management',meals:6,cal:350,pro:22,price:1099,inc:['6 lighter, balanced meals','Veg-forward bowls and salads','Portion sizes clearly labelled']},
+{id:'be',n:'Balanced Everyday',meals:6,cal:430,pro:24,price:999,inc:['6 mixed meals','Grains, protein and veggies in each','Veg and non-veg mix']},
+{id:'vg',n:'Vegetarian',meals:6,cal:400,pro:20,price:949,inc:['6 vegetarian meals','Paneer, dal, rajma and millets','No eggs, no meat']},
+{id:'ol',n:'Office Lunch',meals:5,cal:460,pro:26,price:899,inc:['5 weekday lunches','Delivere
